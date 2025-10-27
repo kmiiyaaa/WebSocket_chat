@@ -36,6 +36,7 @@ public class ChatHandler extends TextWebSocketHandler{
 		for(WebSocketSession s :  sessions) {
 			if(s.isOpen()) {  //true : 세션이 아직 연결되어 있는 경우
 				s.sendMessage(new TextMessage(sender +" : "+ msgTest));
+				System.out.println(sender +" : "+ msgTest);
 			}
 		}
 	}
